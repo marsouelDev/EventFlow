@@ -1,0 +1,45 @@
+{
+  "compilerOptions": {
+    /* Cible JavaScript */
+    "target": "ES2020",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+
+    /* Environnement navigateur */
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+
+    /* Organisation des fichiers */
+    "rootDir": "src",
+    "outDir": "dist",
+
+    /* Qualité et sécurité TypeScript */
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+
+    /* Interopérabilité */
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "forceConsistentCasingInFileNames": true,
+
+    /* Génération */
+    "sourceMap": true,
+    "removeComments": true,
+    "noEmitOnError": true,
+
+    /* Désactivé (comme demandé) */
+    "declaration": false,
+
+    /* Optimisation */
+    "skipLibCheck": true
+  },
+
+  "include": [
+    "src/**/*"
+  ],
+
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}

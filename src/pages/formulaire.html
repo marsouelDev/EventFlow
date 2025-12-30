@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Créer un Évènement</title>
+  <link rel="stylesheet" href="/styles/formulaire.css" />
+</head>
+<body>
+<header id="theme">
+  <button type="button">
+    <img id="image" src="/images/icone-lune.jpg" alt="">
+  </button>
+</header>
+  <div class="register-container">
+
+    <!-- PANEL GAUCHE -->
+    <div class="left-panel">
+      <div class="logo-box">
+        <h3>EventApp</h3>
+         <img src="/images/EventFlow.jpg" alt="Logo EventFlow" class="logo-img">
+        <p>EventFlow</p>
+      </div>
+    </div>
+
+    <!-- PANEL DROIT -->
+    <div class="right-panel">
+      <h2>Créer un évènement</h2>
+
+      <form id="evenement-form" class="formulaire">
+
+        <div class="corps">
+          <label for="title">Titre <span class="important">*</span></label>
+          <input id="title" name="title" type="text" placeholder="nom de l'évènement">
+        </div>
+
+        <div class="corps">
+          <label for="description">Description<span class="important">*</span></label>
+          <textarea id="description" name="description" rows="4"></textarea>
+        </div>
+
+        <div class="corps">
+          <label for="date">Date & heure <span class="important">*</span></label>
+          <input id="date" name="date" type="datetime-local">
+        </div>
+
+        <div class="corps">
+          <label for="location">Lieu de l'évènement <span class="important">*</span></label>
+          <input id="location" name="location" type="text" placeholder="location de l'évènement">
+        </div>
+
+        <div class="corps">
+          <label for="category">Catégorie</label>
+          <select id="category" name="category" class="categorie">
+            <option value="conférence">Conférence</option>
+            <option value="sport">Sport</option>
+            <option value="atelier">Atelier</option>
+            <option value="autre">Autre</option>
+          </select>
+        </div>
+
+        <div class="corps">
+          <label for="capacity">Capacité maximale <span class="important">*</span></label>
+          <input id="capacity" name="capacity" type="number" min="1" max="10000" value="1">
+        </div>
+
+        <div class="formulaire-boutons">
+          <button type="submit">Créer l'évènement</button>
+          <a href="/gestion.html" class="annuler">Quitter</a>
+        </div>
+
+      </form>
+    </div>
+
+  </div>
+
+  <script type="module" src="/dist/Event-management/gestionEvenement.js"></script>
+</body>
+</html>

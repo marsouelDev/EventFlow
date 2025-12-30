@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EventApp - Gestion des Événements</title>
+    <link rel="stylesheet" href="/styles/liste.css" />
+    <link rel="icon" href="data:,">
+
+</head>
+<body>
+<body>
+<header class="header">
+  <div class="logo">
+    <img src="/images/EventFlow.jpg" alt="Logo EventFlow" class="logo-img"><span>EventFlow</span>
+  </div>
+
+  <div id="theme">
+    <button type="button">
+      <img id="image" src="/images/icone-lune.jpg" alt="Changer le thème">
+    </button>
+  </div>
+</header>
+
+
+<div class="corps">
+    <h2>Liste des événements</h2>
+
+    <section class="filtration">
+        <select id="categorie">
+            <option value="Conference">Conférence</option>
+            <option value="Sport">Sport</option>
+            <option value="Atelier">Atelier</option>
+            <option value="Autre">Autre</option>
+        </select>
+        
+    <input id="date" name="date" type="date" />
+        
+         <button class="btn-rechercher">Rechercher</button>
+          <button class="btn-afficher">Afficher Tout</button>
+         <a href="/gestion.html" class="annuler">Quitter</a>
+        
+    </section>
+     <div id="liste-event"></div>
+</div>
+<script type="module" src="/dist/Event-management/listeEvenement.js"></script>
+</body>
+</html>

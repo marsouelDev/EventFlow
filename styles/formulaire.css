@@ -1,0 +1,243 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+body {
+  background: linear-gradient(135deg, #2196F3, #5C6BC0);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #e5e7eb;
+}
+#theme {
+  position: fixed;
+  top: 20px;
+  right: 25px;
+  z-index: 1000;
+}
+
+#theme button {
+  all: unset;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#theme button:hover {
+  transform: scale(1.1) rotate(8deg);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+}
+
+#theme img {
+  width: 22px;
+}
+.register-container {
+  width: 95%;
+  max-width: 1100px;
+  min-height: 620px;
+  display: flex;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.8);
+}
+.left-panel {
+  width: 40%;
+  background: linear-gradient(160deg, #22d3ee, #4f46e5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.logo-box {
+  z-index: 2;
+  text-align: center;
+  padding: 50px 45px;
+  border-radius: 26px;
+  background: rgba(255,255,255,0.18);
+  border: 1px solid rgba(255,255,255,0.35);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 25px 60px rgba(0,0,0,0.45);
+  transition: transform 0.4s ease;
+}
+
+.logo-box:hover {
+  transform: translateY(-8px) scale(1.04);
+}
+
+.logo-img {
+  width: 90px;
+  margin: 10px auto;
+  display: block;
+  filter: drop-shadow(0 10px 20px rgba(0,0,0,0.4));
+}
+
+.logo-box h3 {
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.logo-box p {
+  margin-top: 8px;
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+.right-panel {
+  width: 60%;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.right-panel h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.formulaire {
+  background: linear-gradient(145deg, #2f3a5f, #1e2642);
+  padding: 30px;
+  border-radius: 18px;
+  display: grid;
+  gap: 14px;
+}
+
+.corps {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #a5b4fc;
+}
+
+input,
+textarea,
+select {
+  padding: 0.7rem 0.85rem;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.2);
+  background: rgba(255,255,255,0.08);
+  color: white;
+  font-size: 0.95rem;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: #38bdf8;
+  box-shadow: 0 0 10px rgba(56,189,248,0.6);
+}
+.formulaire-boutons {
+  display: flex;
+  gap: 14px;
+  margin-top: 10px;
+}
+
+button {
+  flex: 1;
+  padding: 0.75rem;
+  border-radius: 12px;
+  border: none;
+  font-weight: 700;
+  background: linear-gradient(135deg, #38bdf8, #6366f1);
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  transform: translateY(-2px);
+}
+
+.annuler {
+  flex: 1;
+  text-align: center;
+  padding: 0.75rem;
+  border-radius: 12px;
+  text-decoration: none;
+  background: rgba(255,255,255,0.12);
+  color: white;
+}
+select { color: #0f172a; }
+.error-input { 
+   border: 2px solid #f43f5e !important;
+   box-shadow: 0 0 8px rgba(244, 63, 94, 0.6);
+   } 
+.error-area { 
+  border: 2px solid #f43f5e !important; 
+  box-shadow: 0 0 8px rgba(244, 63, 94, 0.6); 
+} 
+.succes-input { 
+  border: 2px solid #20e706 !important;
+  box-shadow: 0 0 8px rgba(5, 231, 35, 0.6); } 
+.succes-area { 
+  border: 2px solid #20e706 !important; 
+  box-shadow: 0 0 8px rgba(5, 231, 35, 0.6); 
+}
+ .error-message { 
+  color: #f87171; font-size: 0.85rem; 
+  margin-top: 5px; margin-left: 8%; 
+  font-weight: 600; 
+}
+
+body.sombre {
+  background: #020617;
+}
+
+body.sombre .formulaire {
+  background: #020617;
+}
+
+body.sombre input,
+body.sombre textarea,
+body.sombre select {
+  background: #020617;
+  border-color: #555;
+}
+
+body.sombre .left-panel {
+  background: linear-gradient(160deg, #020617, #1e293b);
+}
+
+body.sombre .logo-box {
+  background: rgba(255,255,255,0.08);
+  border-color: rgba(255,255,255,0.2);
+}
+
+@media (max-width: 900px) {
+  .register-container {
+    flex-direction: column;
+  }
+
+  .left-panel,
+  .right-panel {
+    width: 100%;
+  }
+
+  .right-panel {
+    padding: 30px;
+  }
+}

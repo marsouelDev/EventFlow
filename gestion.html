@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EventApp - Gestion des Événements</title>
+    <link rel="stylesheet" href="./styles/gestion.css" />
+</head>
+
+<body>
+
+<header class="header">
+ 
+  <div class="logo">
+    <img src="./images/EventFlow.jpg" alt="Logo EventFlow" class="logo-img">
+    <span>EventFlow</span>
+  </div>
+
+  <div id="theme">
+    <button type="button">
+      <img id="image" src="/images/icone-lune.jpg" alt="Changer le thème">
+    </button>
+  </div>
+</header>
+
+<section class="corps">
+    <h1>Votre plateforme moderne de gestion des événements</h1>
+    <p class="subtitle">
+        Créez, organisez, planifiez, visualisez et gérez vos événements en toute simplicité.
+    </p>
+
+    <main class="blocks">
+
+        <a href="./src/pages/formulaire.html" class="blocksEvents">
+            <h3>Créer un événement</h3>
+            <p>
+                Fournissez aux utilisateurs toutes les informations essentielles
+                concernant une activité à venir.
+            </p>
+        </a>
+
+        <a href="./src/pages/Inscription.html" class="blocksEvents">
+            <h3>Inscription à un événement</h3>
+            <p>
+                Permet aux utilisateurs de confirmer facilement leur participation
+                à un événement.
+            </p>
+        </a>
+
+        <a href="./src/pages/liste.html" class="blocksEvents">
+            <h3>Liste des événements</h3>
+            <p>
+                Consultez les événements disponibles et en cours sur la plateforme.
+            </p>
+        </a>
+
+    </main>
+</section>
+<script type="module" src="/dist/Event-management/gestion.js"></script>
+</body>
+
+</html>
