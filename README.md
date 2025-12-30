@@ -1,173 +1,182 @@
-# EventFlow
+# EventFlow – Application de gestion des événements
 
-EventFlow est une application web de gestion des événements. Elle facilite la création, la gestion, la consultation et l’inscription à des événements.
+## 1. Présentation du projet
 
-Le nom **EventFlow** a été choisi pour refléter l’objectif principal de l’application : faciliter la gestion fluide et organisée des événements.  
-- **Event** désigne les événements à organiser.  
-- **Flow** exprime l’idée de fluidité et de bonne organisation.
+**EventFlow** est une application web de gestion des événements développée en **TypeScript**, **HTML** et **CSS**.  
+Elle permet de créer, consulter et gérer des événements ainsi que d’inscrire des utilisateurs de manière simple et intuitive.
 
-## Présentation de l’application
+Le nom **EventFlow** reflète l’objectif principal de l’application :
+- **Event** : les événements à organiser  
+- **Flow** : la fluidité et la bonne organisation des actions  
 
-<p align="center">
-  <img src="images/Accuiel.png" alt="Interface EventFlow" width="600">
-</p>
-
-La page d’accueil propose trois boutons permettant d’accéder à :  
-- Le formulaire d’inscription à un événement  
-- Le formulaire d’inscription d’un utilisateur  
-- L’affichage des événements existants  
+Ce projet a été réalisé dans le cadre académique de la **Licence 2 Informatique**.
 
 ---
 
-### 1.Formulaire de création d’un événement
+## 2. Fonctionnalités développées
 
-<p align="center">
-  <img src="images/FormulaireEvent1.png" alt="Formulaire création événement" width="600">
-  <img src="images/FormulaireEvent2.png" alt="Formulaire création événement" width="600">
-</p>
+| Fonctionnalité       | Statut |
+|----------------      |--------|
+| Création d’événements =  OK |
+| Affichage de la liste complète =  OK |
+| Filtrage par catégorie =  OK |
+| Page détail d’un événement = OK |
+| Inscription d’un utilisateur = OK |
+| Vérification des doublons = OK |
+| Gestion capacité & places restantes = OK |
+| Mode sombre = Bonus = OK |
+| Responsive (mobile & tablette) = Bonus = OK |
 
-Ce formulaire permet d’enregistrer un événement avec les informations suivantes :  
-- Titre  
-- Description  
-- Date  
-- Lieu  
-- Catégorie  
-- Capacité
+## 3. Structure du projet
 
-Si certains champs sont vides ou invalides, des messages d’erreur apparaissent pour guider l’utilisateur.
+event-app/
+│── index.html
+│── styles/
+│   └── gestion.css
+│── images/
+│── dist/              ← fichiers JavaScript compilés
+│── src/
+│   ├── models/        ← événement, utilisateur, inscription
+│   ├── services/      ← logique métier
+│   └── main.ts        ← point d’entrée
+│── tsconfig.json
+│── package.json
+│── .gitignore
+└── README.md
+Description
 
-<p align="center">
-  <img src="images/erreurFormulaire.png" alt="Erreur formulaire" width="600">
-</p>
+src/ : code source TypeScript
 
-Une fois l’événement enregistré avec succès, un message de confirmation s’affiche.
+dist/ : fichiers compilés
 
-<p align="center">
-  <img src="images/messageValide.png" alt="Confirmation formulaire" width="600">
-</p>
+styles/ : feuilles de style CSS
 
----
+images/ : captures d’écran
 
-### Formulaire d’inscription à un événement
+index.html : page principale de l’application
 
-<p align="center">
-  <img src="images/InscriptionEvent1.png" alt="Formulaire inscription événement" width="600">
-  <img src="images/inscriptionEvent2.png" alt="Formulaire inscription événement" width="600">
-</p>
+## 4. Installation & lancement
+Prérequis
 
-Ce formulaire permet à un utilisateur de s’inscrire à un événement existant.
+Node.js (v18 ou plus)
 
-Des messages d’erreur s’affichent en cas de problème lors de la saisie, notamment :  
-- L’événement sélectionné n’existe pas  
-- Le nombre de places disponibles est plein  
-- L’événement est terminé  
+npm
 
-<p align="center">
-  <img src="images/erreurIncription.png" alt="Confirmation formulaire" width="600">
-</p>
+Navigateur web moderne
 
-Lorsqu’une inscription réussit, un message de succès s’affiche pour confirmer l’inscription.
+Étapes
 
-### Liste des événements
-
-<p align="center">
-  <img src="images/liste1.png" alt="Liste événements" width="600">
-</p>
-
-Les événements terminés sont signalés par un cadre rouge clair avec la mention **Terminé** affichée en haut du cadre.  
-Les événements en cours restent dans un cadre blanc avec la mention **En cours**.
-
-<p align="center">
-  <img src="images/liste2.png" alt="Liste événements terminés" width="600">
-</p>
-
-### Fonctionnalités additionnelles
-
-- Filtrage des événements par catégorie et par date  
-- Peut mettre  entre le mode clair et le mode sombre pour un meilleur confort visuel comme representer comme suit :
-<p align="center">
-  <img src="images/mode.png" alt="Liste événements terminés" width="600">
-</p>
-
-- Elle egalement accessible sur telephone et tablette comme suite:
-<p align="center">
-  <img src="images/responsible.png" alt="Liste événements terminés" width="600">
-</p>
-<p align="center">
-  <img src="images/tabette.png" alt="Liste événements terminés" width="600">
-</p>
-
-## Instructions d’installation
-
-### Prérequis
-
-Assurez-vous d’avoir installé sur votre machine :  
-- [Node.js](https://nodejs.org/) (version 18 ou supérieure recommandée)  
-- npm (installé automatiquement avec Node.js)  
-- Un navigateur web moderne (Chrome, Edge, Firefox, etc.)
-
-### Étapes d’installation
-
-1. **Cloner le dépôt**
+1️ Cloner le dépôt
 
 git clone https://github.com/marsouelDev/EventFlow
 
-2. **Accéder au dossier du projet**
+
+2️ Accéder au projet
 
 cd Event-app
 
-3. **Installer les dépendances (si nécessaire)**
+3️ Installer les dépendances
 
 npm install
 
-4. **Compiler le projet TypeScript**
+4️ Compiler le TypeScript
 
 npm run build
 
-5. **Compiler le projet en mode watch (compilation automatique à chaque modification)**
+5️ Compilation automatique
 
 npm run watch
 
-Les commandes ci-dessus génèrent le dossier `dist/` à partir du code source situé dans `src/`.
+6️ Lancer l’application
+→ Ouvrir index.html dans un navigateur
+→ ou utiliser Live Server (VS Code)
 
-6. **Lancer l’application**
+## 5  Mode d’utilisation de l’application
+ Page d’accueil
 
-Ouvrez le fichier `index.html` dans un navigateur via un serveur local (exemple : extension Live Server de VS Code) pour garantir le bon fonctionnement.
+Accès à :
 
-## Mode d’utilisation
+Création d’événement
 
-1. **Page d’accueil** :  
-   - Cliquez sur le bouton **Créer un événement** pour accéder au formulaire de création.  
-   - Cliquez sur **S’inscrire à un événement** pour rejoindre un événement existant.  
-   - Cliquez sur **Voir les événements** pour afficher tous les événements créés.
+Inscription à un événement
 
-2. **Créer un événement** :  
-   - Remplissez tous les champs obligatoires dans le formulaire.  
-   - Si une erreur s’affiche, corrigez-la avant de soumettre.  
-   - Après validation, un message confirme la création.
+Liste des événements
 
-3. **S’inscrire à un événement** :  
-   - Sélectionnez l’événement auquel vous souhaitez vous inscrire.  
-   - Remplissez les informations requises.  
-   - Des messages d’erreur apparaissent en cas de problème, notamment si :  
-     - L’événement n’existe pas  
-     - Le nombre de places est plein  
-     - L’événement est terminé  
-   - Lorsqu’une inscription réussit, un message de succès s’affiche.
+ Créer un événement
 
-4. **Afficher les événements** :  
-   - Parcourez la liste des événements.  
-   - Utilisez les filtres par catégorie et date pour affiner votre recherche.  
-   - Identifiez rapidement les événements terminés grâce à leur cadre rouge.
+Remplir tous les champs obligatoires
 
-5. **Changer de thème** :  
-   - Utilisez le bouton de bascule pour passer du mode clair au mode sombre et inversement.
+Des messages d’erreur s’affichent si les données sont invalides
 
-6. **Parcours de page liste à  la page S’inscrire à un événement grace au bouton participer** :
-    - utiliser le bouton particuler qui est dans la page affiche les événements  pour arriver à  la page S’inscrire à un événement.
-##  Auteur
-- Nom : NGOUADJIO FEUDJIO Marsouel
-- Niveau : Licence 2 Informatique
-- Année : 2025 – 2026
+Un message confirme la création
 
-  
+ S’inscrire à un événement
+
+Sélectionner un événement
+
+Inscription impossible si :
+
+l’événement est terminé
+
+la capacité est atteinte
+
+l’utilisateur est déjà inscrit
+
+ Liste et filtres
+
+Filtrage par catégorie et date
+
+Les événements terminés sont affichés en rouge
+
+Bouton Participer pour accéder à l’inscription
+
+ Thème
+
+Bascule mode clair / mode sombre
+
+Application responsive (mobile & tablette)
+
+. Captures d’écran
+Page d’accueil
+
+<p align="center"> <img src="images/Accuiel.png" width="600"> </p>
+Formulaire de création d’événement
+
+<p align="center"> <img src="images/FormulaireEvent1.png" width="600"> <img src="images/FormulaireEvent2.png" width="600"> </p>
+Erreurs de formulaire
+<p align="center"> <img src="images/erreurFormulaire.png" width="600"> </p>
+Message de confirmation
+<p align="center"> <img src="images/messageValide.png" width="600"> </p>
+Inscription à un événement
+
+<p align="center"> <img src="images/InscriptionEvent1.png" width="600"> <img src="images/inscriptionEvent2.png" width="600"> </p>
+Liste des événements
+
+<p align="center"> <img src="images/liste1.png" width="600"> <img src="images/liste2.png" width="600"> </p>
+Mode sombre
+
+<p align="center"> <img src="images/mode.png" width="600"> </p>
+Responsive (mobile & tablette)
+
+<p align="center"> <img src="images/responsible.png" width="600"> <img src="images/tabette.png" width="600"> </p>
+
+## 7. Conclusion & limites
+
+L’application EventFlow répond efficacement aux objectifs de gestion des événements.
+La validation des données, la gestion des capacités et l’inscription fonctionnent correctement.
+
+Les principales difficultés concernaient la gestion des erreurs et la cohérence des données.
+Avec plus de temps, des améliorations possibles seraient :
+
+l’utilisation d’une base de données,
+
+l’ajout d’une authentification,
+
+une interface encore plus avancée.
+
+## 8.  Informations auteur
+
+Nom et Prénom	NGOUADJIO FEUDJIO Marsouel
+Matricule	2425L111
+Niveau	Licence 2 Informatique
+Année	2025 – 2026

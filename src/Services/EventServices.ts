@@ -97,6 +97,7 @@ estEvenementPasse(e : Evenement): boolean {
    return dateEvent < today;
 
 }
+
 inscriptionPasse(nomEvent: string, categorie: TypeEvenement): void {
     const categorieNorm = categorie.toLowerCase().trim();
     const today = new Date();
