@@ -152,39 +152,43 @@ function CorrectLocation(): void {
 
 /* fonction permettant de verifier si ses champs sont pleines */
 
-function valideFormulaire() : boolean{
+function valideFormulaire() : boolean {
   let isValid : boolean = true;
 
   if(titre.value.trim() === ""){
-    
-    showErreurInput(titre,"le titre est obligatoire");
+    showErreurInput(titre,"Le titre est obligatoire");
     isValid = false;
-    
   }
   else{
     clearErreurInput(titre);
   }
-  
+
   if(description.value.trim() === ""){
-
-    showErreurArea(description,"le description est obligatoire");
+    showErreurArea(description,"La description est obligatoire");
     isValid = false;
-
   }
   else{
     clearErreurArea(description);
   }
 
   if(date.value.trim() === ""){
-    showErreurInput(date,"la date est obligatoire");
+    showErreurInput(date,"La date est obligatoire");
     isValid = false;
-  }
-  else{
-    clearErreurInput(date);
+  } else {
+    // Validation date inférieure à aujourd'hui
+    const dateEvenement = new Date(date.value).setHours(0, 0, 0, 0);;
+    const today = new Date().setHours(0, 0, 0, 0);;
+   
+    if (dateEvenement < today) {
+      showErreurInput(date, "La date ne peut pas être antérieure à aujourd'hui");
+      isValid = false;
+    } else {
+      clearErreurInput(date);
+    }
   }
 
   if(lieu.value.trim() === ""){
-    showErreurInput(lieu,"le lieu est obligatoire");
+    showErreurInput(lieu,"Le lieu est obligatoire");
     isValid = false;
   }
   else{
@@ -193,6 +197,7 @@ function valideFormulaire() : boolean{
 
   return isValid;
 }
+
   titre.addEventListener("keyup", correctTitre);
   titre.addEventListener("blur", correctTitre);
   date.addEventListener("change", correctDate);
@@ -238,5 +243,4 @@ formulaire.addEventListener( "submit", (event)=>{
        formulaire.reset();
 
 })
-
 

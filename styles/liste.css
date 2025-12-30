@@ -125,7 +125,7 @@ body {
   background: #374151;
   transform: translateY(-1px);
 }
-.btn-rechercher,
+
 .Liste,
 .annuler,
 .btn-afficher {
@@ -137,14 +137,12 @@ body {
   border: none;
 }
 
-.btn-rechercher,
+
 .Liste,.btn-afficher {
   background: #059669;
   color: white;
 }
 
-
-.btn-rechercher:hover,
 .Liste,.btn-afficher:hover {
   background: #0a8ac5;
   transform: translateY(-2px);

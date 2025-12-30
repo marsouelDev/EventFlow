@@ -84,25 +84,18 @@ Les événements en cours restent dans un cadre blanc avec la mention **En cours
 ### Fonctionnalités additionnelles
 
 - Filtrage des événements par catégorie et par date  
-- Peut mettre  entre le mode clair et le mode sombre pour un meilleur confort visuel
+- Peut mettre  entre le mode clair et le mode sombre pour un meilleur confort visuel comme representer comme suit :
+<p align="center">
+  <img src="images/mode.png" alt="Liste événements terminés" width="600">
+</p>
 
-## Structure du projet
-
-event-app/   
-├── dist/             # Code JavaScript compilé
-├── images/           # Ressources graphiques
-├── src/              # Code source TypeScript
-│   ├── Event-management/   
-│   ├── Exception/       # Gestion des exceptions
-│   ├── models/          # Modèles de données
-│   ├── pages/           # Fichiers HTML
-│   ├── services/        # Services métiers au il y'a de methodes utilser pour le projet
-├── styles/          # Fichiers CSS
-├── .gitignore       # Fichiers ignorés par git
-├── gestion.html     # Page principale
-├── package.json     # Gestion des dépendances et scripts
-├── README.md        # Documentation
-└── tsconfig.json    # Configuration TypeScript
+- Elle egalement accessible sur telephone et tablette comme suite:
+<p align="center">
+  <img src="images/responsible.png" alt="Liste événements terminés" width="600">
+</p>
+<p align="center">
+  <img src="images/tabette.png" alt="Liste événements terminés" width="600">
+</p>
 
 ## Instructions d’installation
 
@@ -117,7 +110,7 @@ Assurez-vous d’avoir installé sur votre machine :
 
 1. **Cloner le dépôt**
 
-git clone https://github.com/votre-utilisateur/Event-app.git
+git clone https://github.com/marsouelDev/EventFlow
 
 2. **Accéder au dossier du projet**
 
@@ -176,4 +169,5 @@ Ouvrez le fichier `index.html` dans un navigateur via un serveur local (exemple 
 - Nom : NGOUADJIO FEUDJIO Marsouel
 - Niveau : Licence 2 Informatique
 - Année : 2025 – 2026
+
   

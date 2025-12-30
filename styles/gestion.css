@@ -1,4 +1,3 @@
-
 * {
   margin: 0;
   padding: 0;
@@ -7,22 +6,37 @@
 }
 
 body {
-
-  background: #e5f7f1; /* clair */
-  color: #e5f7f1;
+  background: #e5f7f1;
+  color: #1f2937;
   line-height: 1.6;
   overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-size: 1rem;
 }
+
+body.sombre {
+  background: #020617;
+  color: #e5e5e5;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
 
 .header {
   width: 100%;
   padding: 20px 60px;
   background: #ffffff;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
   display: flex;
   align-items: center;
-  justify-content: space-between; 
+  justify-content: space-between;
+  transition: background-color 0.3s ease;
 }
+
+body.sombre .header {
+  background: #020617;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
 .logo {
   display: flex;
   align-items: center;
@@ -30,11 +44,18 @@ body {
   font-size: clamp(20px, 2.5vw, 26px);
   font-weight: bold;
   color: #1f2937;
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.3s ease, opacity 0.3s ease, color 0.3s ease;
 }
+
+body.sombre .logo {
+  color: #e5e5e5;
+}
+
 .logo-img {
   width: 50px;
   height: auto;
-
   object-fit: contain;
   transition: transform 0.3s ease;
 }
@@ -52,6 +73,13 @@ body {
   text-align: center;
   padding: 100px 20px;
   background: linear-gradient(150deg, #351b7e, #240e52);
+  color: #ffffff;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.sombre .corps {
+  background: #240e52;
+  color: #e5e5e5;
 }
 
 .corps h1 {
@@ -85,10 +113,14 @@ body {
   text-decoration: none;
   border: 1px solid rgba(255, 255, 255, 0.15);
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
-  transition:
-    transform 0.35s ease,
-    box-shadow 0.35s ease,
-    background 0.35s ease;
+  transition: transform 0.35s ease, box-shadow 0.35s ease, background 0.35s ease;
+  cursor: pointer;
+}
+
+.blocksEvents:hover {
+  transform: translateY(-10px);
+  background: #4b54ff;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.5);
 }
 
 .blocksEvents h3 {
@@ -102,46 +134,7 @@ body {
   color: #f1f1f1;
 }
 
-.blocksEvents:hover {
-  transform: translateY(-10px);
-  background: #4b54ff;
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.5);
-}
-
-
-@media (max-width: 600px) {
-  .header {
-    padding: 16px 20px;
-  }
-
-  .logo-img {
-    width: 50px;
-  }
-
-  .logo span {
-    font-size: 20px;
-  }
-
-  .corps {
-    padding: 80px 16px;
-  }
-
-  .blocks {
-    margin-top: 50px;
-    gap: 22px;
-  }
-   }
-    #theme {
-    top: 15px;
-    right: 15px;
-  }
-
-  #theme button {
-    width: 42px;
-    height: 42px;
-  
-}
-
+/* Bouton thème */
 #theme {
   position: fixed;
   top: 20px;
@@ -157,9 +150,16 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(0,0,0,0.08);
-  box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+  background: rgba(0, 0, 0, 0.08);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
   cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+#theme button:hover {
+  transform: scale(1.1) rotate(8deg);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.15);
 }
 
 #theme img {
@@ -169,33 +169,41 @@ body {
   pointer-events: none;
 }
 
+@media (max-width: 600px) {
+  .header {
+    padding: 16px 20px;
+  }
 
-#theme button:hover {
-  transform: scale(1.1) rotate(8deg);
-  box-shadow: 0 15px 35px rgba(0,0,0,0.6);
-} 
-.image{
+  .logo-img {
+    width: 50px;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+
+  .corps {
+    padding: 80px 16px;
+  }
+
+  .blocks {
+    margin-top: 50px;
+    gap: 22px;
+  }
+
+  #theme {
+    top: 10px;
+    right: 10px;
+  }
+}
+
+button:focus,
+a:focus {
+  outline: 3px solid #351b7e;
+  outline-offset: 2px;
+}
+
+.image {
   background-color: #2196F3;
   border-radius: 50%;
 }
-/* partie pour le changement de theme */
-body.sombre {
- background: #020617;
-  color: white;
-}
-
-body.sombre .corps {
-  background: #240e52;
-}
-body.sombre .header {
-  background: #020617;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.5);
-}
-
-body.sombre .logo {
-  color: white;
-}
-
-
-
-
