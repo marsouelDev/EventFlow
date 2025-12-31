@@ -15,35 +15,33 @@ Ce projet a été réalisé dans le cadre académique de la **Licence 2 Informat
 
 ## 2. Fonctionnalités développées
 
-| Fonctionnalité       | Statut |
-|----------------      |--------|
-| Création d’événements =  OK |
-| Affichage de la liste complète =  OK |
-| Filtrage par catégorie =  OK |
-| Page détail d’un événement = OK |
-| Inscription d’un utilisateur = OK |
-| Vérification des doublons = OK |
-| Gestion capacité & places restantes = OK |
-| Mode sombre = Bonus = OK |
-| Responsive (mobile & tablette) = Bonus = OK |
+ Fonctionnalité                          Statut 
+
+ Création d’événements                     OK 
+ Affichage de la liste complète            OK 
+ Filtrage par catégorie                    OK 
+ Page détail d’un événement                OK 
+ Inscription d’un utilisateur              OK 
+ Vérification des doublons                 OK 
+ Gestion capacité & places restantes       OK 
+ Mode sombre = Bonus                       OK 
+ Responsive (mobile & tablette) = Bonus    OK 
 
 ## 3. Structure du projet
 
 event-app/
-│── index.html
+│── gestion.html
 │── styles/
-│   └── gestion.css
 │── images/
-│── dist/              ← fichiers JavaScript compilés
+│── dist/             
 │── src/
-│   ├── models/        ← événement, utilisateur, inscription
-│   ├── services/      ← logique métier
-│   └── main.ts        ← point d’entrée
+│   ├── models/        
+│   ├── services/      
+│   └── Event- management    
 │── tsconfig.json
 │── package.json
 │── .gitignore
-└── README.md
-Description
+└── README.md           
 
 src/ : code source TypeScript
 
@@ -53,7 +51,7 @@ styles/ : feuilles de style CSS
 
 images/ : captures d’écran
 
-index.html : page principale de l’application
+gestion.html : page principale de l’application
 
 ## 4. Installation & lancement
 Prérequis
@@ -92,7 +90,8 @@ npm run watch
 → ou utiliser Live Server (VS Code)
 
 ## 5  Mode d’utilisation de l’application
- Page d’accueil
+
+1. Page d’accueil
 
 Accès à :
 
@@ -102,7 +101,7 @@ Inscription à un événement
 
 Liste des événements
 
- Créer un événement
+2. Créer un événement
 
 Remplir tous les champs obligatoires
 
@@ -110,7 +109,7 @@ Des messages d’erreur s’affichent si les données sont invalides
 
 Un message confirme la création
 
- S’inscrire à un événement
+3. S’inscrire à un événement
 
 Sélectionner un événement
 
@@ -122,7 +121,7 @@ la capacité est atteinte
 
 l’utilisateur est déjà inscrit
 
- Liste et filtres
+4. Liste et filtres
 
 Filtrage par catégorie et date
 
@@ -130,13 +129,13 @@ Les événements terminés sont affichés en rouge
 
 Bouton Participer pour accéder à l’inscription
 
- Thème
+5. Thème
 
 Bascule mode clair / mode sombre
 
 Application responsive (mobile & tablette)
 
-. Captures d’écran
+6. Captures d’écran
 Page d’accueil
 
 <p align="center"> <img src="images/Accuiel.png" width="600"> </p>
@@ -177,6 +176,6 @@ une interface encore plus avancée.
 ## 8.  Informations auteur
 
 Nom et Prénom	NGOUADJIO FEUDJIO Marsouel
-Matricule	2425L111
-Niveau	Licence 2 Informatique
-Année	2025 – 2026
+Matricule	    2425L111
+Niveau	        Licence 2 Informatique
+Année	        2025 – 2026
