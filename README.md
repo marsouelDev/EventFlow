@@ -151,7 +151,10 @@ Inscription à un événement
 <p align="center"> <img src="images/InscriptionEvent1.png" width="600"> <img src="images/inscriptionEvent2.png" width="600"> </p>
 Liste des événements
 
-<p align="center"> <img src="images/liste1.png" width="600"> <img src="images/liste2.png" width="600"> </p>
+<p align="center"> <img src="images/liste1.png" width="600"> <img src="images/listeEvent.png" width="600"> </p>
+Suppression d' un evenement
+<p align="center"> <img src="images/Suppression.png" width="600"> <img src="images/MessageSuppression .png" width="600"> </p>
+
 Mode sombre
 
 <p align="center"> <img src="images/mode.png" width="600"> </p>

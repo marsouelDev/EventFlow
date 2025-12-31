@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>EventApp - Gestion des Événements</title>
-    <link rel="stylesheet" href="/styles/liste.css" />
-    <link rel="icon" href="data:,">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EventApp - Gestion des Événements</title>
+  <link rel="stylesheet" href="/styles/liste.css" />
+  <link rel="icon" href="data:,">
 </head>
-<body>
 <body>
 <header class="header">
   <div class="logo">
@@ -22,28 +20,41 @@
   </div>
 </header>
 
-
 <div class="corps">
-    <h2>Liste des événements</h2>
+  <h2>Liste des événements</h2>
 
-    <section class="filtration">
-        <select id="categorie">
-            <option value="">Toutes les catégories</option>
-            <option value="Conference">Conférence</option>
-            <option value="Sport">Sport</option>
-            <option value="Atelier">Atelier</option>
-            <option value="Autre">Autre</option>
-        </select>
-        
+  <section class="filtration">
+    <select id="categorie">
+      <option value="">Toutes les catégories</option>
+      <option value="Conference">Conférence</option>
+      <option value="Sport">Sport</option>
+      <option value="Atelier">Atelier</option>
+      <option value="Autre">Autre</option>
+    </select>
+    
     <input id="date" name="date" type="date" />
         
-         
-          <button class="btn-afficher">Afficher Tout</button>
-         <a href="/gestion.html" class="annuler">Quitter</a>
-        
-    </section>
-     <div id="liste-event"></div>
+    <button class="btn-afficher">Afficher Tout</button>
+    <a href="/gestion.html" class="annuler">Quitter</a>
+  </section>
+
+  <div id="liste-event"></div>
 </div>
+
+<!-- Modale suppression -->
+<div id="suppression" class="suppression-modal hidden">
+  <div class="suppression-content">
+    <h3>Suppression d’un événement</h3>
+    <p>Entrez le mot de passe administrateur pour confirmer :</p>
+    <input type="password" id="admin-password" placeholder="Mot de passe" />
+    <p id="erreur-suppression" class="erreur"></p>
+    <div class="modal-actions">
+      <button id="valider-suppression" class="btn-danger">Valider</button>
+      <button id="annuler-suppression" class="btn-secondary">Annuler</button>
+    </div>
+  </div>
+</div>
+
 <script type="module" src="/dist/Event-management/listeEvenement.js"></script>
 </body>
 </html>
