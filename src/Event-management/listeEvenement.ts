@@ -155,13 +155,13 @@ function ouvrirSuppresionOnglet(index: number) {
   evenementASupprimerIndex = index;
   erreurSuppression.textContent = "";
   inputPassword.value = "";
-  modal.classList.remove("hidden");
+  modal.classList.remove("hidden");   
   inputPassword.focus();
 }
 
 function fermeSuppressionOnglet() {
   evenementASupprimerIndex = null;
-  modal.classList.add("hidden");
+  modal.classList.add("hidden");  
   erreurSuppression.textContent = "";
   inputPassword.value = "";
 }
